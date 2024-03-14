@@ -1,0 +1,105 @@
+.ads {
+    background-image: url("../images/sandocean6.jpg");
+
+}
+
+/*Projects Module*/
+#projects {
+    transform: translateY(-40%);
+    display: grid;
+    grid: 1fr 1fr / 1fr;
+    justify-items: center;
+    align-items: center;
+    scroll-margin: -16em;
+}
+
+#projects h1 {
+    margin-bottom: -3em;
+    animation: scale 10s infinite;
+
+}
+
+#projects .row {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr;
+    margin: 1em 4em;
+    text-align: center;
+    animation: scale 10s ease-in-out infinite;
+
+}
+
+.row img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.col-first-row {
+    margin: 0 1em;
+    padding: 0.5em;
+}
+
+/*Projects Module End*/
+
+.card-spec {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: .5;
+    transform: translate(-2.4%, -4.1%);
+    opacity: 0;
+    transition: 1.5s;
+    text-align: center;
+}
+
+.card-spec:hover{
+    opacity: .85;
+    transition: 2s;
+}
+
+.card-spec p{
+    overflow-wrap: break-word;
+    margin: 1em;
+
+}
+
+@media only screen and (max-width: 1000px) {
+     #projects{
+        display: flex;
+        flex-direction: column;
+        margin: 0 1em;
+        transform: translateY(-10%);
+        scroll-margin: -10em;
+    }
+    #projects h1{
+        margin: 0 0 1em;
+    }
+    #projects .row{
+        display: block;
+        margin: 0;
+    }
+    .col-first-row {
+        margin: 2em;
+    }
+
+    .card-spec{
+        display: none;
+    }
+
+}
+
+/* Footer */
+#footerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2em;
+}
+
+#footerNav img {
+    height: 1.5em;
+    width: 1.5em;
+    margin: 0 em;
+    margin: 0 0.5em;
+}

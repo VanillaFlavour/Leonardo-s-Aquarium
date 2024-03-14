@@ -1,0 +1,100 @@
+.surface {
+    background-image: url("../images/sandocean5.jpg");
+}
+/* Header */
+#headNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+#headNav #navBarH ul li {
+    display: inline-flex;
+    justify-content: space-between;
+    padding-left: 1.5em;
+}
+
+@media only screen and (max-width: 800px) {
+    #headNav h2{
+        display: none;
+    }
+    #headNav{
+        justify-content: center;
+    }
+    #headNav #navBarH ul li {
+        padding: 1em 1em;
+    }
+}
+
+/* Header End */
+
+/*About Me*/
+#aboutMe {
+    display: grid;
+    grid-template-areas:
+        'name name'
+        'cont cont';
+    grid-gap: 6em;
+    height: 100%;
+    width: auto;
+    margin-top: 3.5em;
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+
+.aboutme-name {
+    grid-area: name;
+    transform: scale(1);
+    animation: scale 10s infinite;
+}
+
+.aboutme-name h1 {
+    font-size: 2em;
+}
+
+.aboutme-name h3 {
+    font-size: 1.5em;
+}
+
+.aboutme-name span {
+    opacity: 0;
+    filter: blur(4px);
+    animation: fade-in 3s 0s both;
+}
+
+/*About Me Animations */
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        letter-spacing: 2px;
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        letter-spacing: 2px;
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        letter-spacing: 2px;
+        transform: translate(0, -0px);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .aboutme-name h1{
+        font-size: 1.5em;
+    }
+    .aboutme-name h3{
+        font-size: 1.25em;
+    }
+}
+/*About Me End*/
